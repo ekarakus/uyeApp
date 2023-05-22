@@ -1,0 +1,42 @@
+@model Uye
+<form asp-action="YeniUye" asp-controller="Home" method="post">
+    <div class="row my-3">
+        <label asp-for="Ad"></label>
+        <input class="form-control" asp-for="Ad">
+        <span asp-validation-for="Ad" class="text-danger"></span>
+    </div>
+    <div class="row my-3">
+        <label asp-for="Soyad"></label>
+        <input asp-for="Soyad" class="form-control">
+        <span asp-validation-for="Soyad" class="text-danger"></span>
+    </div>
+    <div class="row my-3">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="row my-3">
+        <label asp-for="DogumYili"></label>
+        <input asp-for="DogumYili" class="form-control">
+        <span asp-validation-for="DogumYili" class="text-danger"></span>
+    </div>
+
+    <div class="row my-3">
+        <label asp-for="Sifre"></label>
+        <input asp-for="Sifre" class="form-control">
+        <span asp-validation-for="Sifre" class="text-danger"></span>
+    </div>
+    <div class="row my-3">
+        <label asp-for="SifreTekrari"></label>
+        <input asp-for="SifreTekrari" class="form-control">
+        <span asp-validation-for="SifreTekrari" class="text-danger"></span>
+    </div>
+    <div class="row my-3">
+        <button class="btn btn-success" type="submit">Kaydet</button>
+    </div>
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

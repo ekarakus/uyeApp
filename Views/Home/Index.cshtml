@@ -1,0 +1,24 @@
+﻿@model List<Uye>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ad Soyad </th>
+            <th>Email</th>
+            <th>Doğum Yılı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Uye u in Model)
+            {
+                <tr>
+                    <td> @u.Ad @u.Soyad </td>
+                    <td> @u.Email</td>
+                    <td> @u.DogumYili</td>
+                </tr>
+            }
+        }
+    </tbody>
+
+
+</table>
